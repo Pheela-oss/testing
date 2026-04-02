@@ -1,17 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <meta charset="UTF-8">
+    <link rel="icon" href="https://i.pinimg.com/736x/cc/81/c5/cc81c5a929d2398bad484ac18b112da9.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
     <head>
-        <title>AAAAAAAAAAAAAAAa</title>
+        <title>Notícias de Hoje</title>
         <style>
-            h1 {
-                text-align: center;
-                margin: 0 auto;
-                font-size: 2vw;
+            body {
+                background: red;
+                margin: 0;
+            }
+            .boldonse-regular {
+                font-family: "Boldonse", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .opcoes {
+                display: flex;
+                background: white;
+                padding: 5px;
+                margin: 0;
+                height: 1vw;
+                gap: 20px;
+                border: 1px solid black;
+            }
+
+            #partes {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1vh;
+                margin: 0;
+                transition: 0.3s ease;
+                color: black;
+            }
+
+            #partes:hover {
+                transform: scale(1.2);
+                color: blue;
+            }
+            
+            .banner {
+                background: white;
+            }
+
+            .banner hr {
+                margin: 0;
+            }
+            .banner h1 {
+                font-family:  "Boldonse", system-ui;
+                color: red;
+                text-shadow: 4px 0px 0px black;
+                margin: 0;
+                margin-left: 10px;
+            }
+
+            .materia {
+                background: red;
+                margin-top: 10px;
+                justify-content: center;
+                position: relative;
+                display: flex;
+            }
+
+
+            .noticia {
+                background: #F0F0F0;
+                padding: 20px;
+                width: 41vw;
+            }
+
+            .noticia h1 {
+                margin: 0;
+                font-size: 4vw;
+                max-width: 50vw;
+                text-transform: uppercase;
+            }
+            
+            .noticia img {
+                width: 100%;
+                height: 50vw;
+                object-fit: cover;
+                display: block;
             }
         </style>
     </head>
     <body>
-        <h1>Se isso funcionou, diga "Trump" no zap</h1>
+        
+        <div class="opcoes">
+            <a id="partes"  href="#sessao1">principal</a>
+            <a id="partes"  href="#sessao2">politica</a>
+            <a id="partes"  href="#sessao3">fofoca</a>
+            <a id="partes"  href="#sessao4">entretenimento</a>
+            <a id="partes"  href="#sessao5">contato</a>
+        </div>
+        
+        <div class="banner">
+            <h1>JORNAL HOJE</h1>
+        </div>
+        
+        <div class="materia">
+
+            
+            <div id="#sessao1" class="noticia">
+                <img class="imagem" src="https://i.pinimg.com/1200x/a9/83/49/a983499ac5825848c0ef412d9f74f53b.jpg">
+                <h1>Lula *fraudou as eleições</h1>
+                <p> Após boquete insano dado ao alexandre de moraes, Lula consegue ilegalmente a posse da presidência mais uma vez.</p>
+                <p>Também, a esposa de alexandre surta, e se suicída após saltar do 550⁰ andar do burj khalifa.</p>
+            </div>
+
+            
+            <div class="noticia">
+                <img class="imagem" src="https://i.pinimg.com/736x/c4/57/07/c45707a42cc5d6d2dfadd0b9e80f44f1.jpg">
+                <h1>exposed de streamer</h1>
+                <p> Após boquete insano dado ao alexandre de moraes, Lula consegue ilegalmente a posse da presidência mais uma vez.</p>
+                <p>Também, a esposa de alexandre surta, e se suicída após saltar do 550⁰ andar do burj khalifa.</p>
+            </div>
+
+            
+        </div>
+
+        <div id="#sessao2" class="materia">
+
+            
+            <div id="#sessao1" class="noticia">
+                <img class="imagem" src="https://i.pinimg.com/736x/84/64/64/84646473557e27d3f73534d263563949.jpg">
+                <h1>fun fact: leites nao vem da vaca</h1>
+                <p>Ta vendo essa peituda? É ela quem coloca o leite no seu café da manhã. (estou sozinho e nao sei o que colocar)</p>
+            </div>
+            
+            
+            <div class="noticia">
+                <img class="imagem" src="https://i.pinimg.com/736x/09/77/76/097776c0b48dd41d610db88354ccad9f.jpg">
+                <h1>speed revela segredo impossivel</h1>
+                <p>speed revela agora o segredo que ele guardou por milenios</p>
+                <p1>"dafuq u doin in my house?! get the fk out of here!!!"</p1>
+            </div>
+
+            
+        </div>
+        
     </body>
+
+    
 </html>
