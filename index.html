@@ -1,224 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <title>Carregando...</title>
     <meta charset="UTF-8">
-    <title>Notícias de Hoje</title>
-    <link rel="icon" href="https://i.pinimg.com/736x/cc/81/c5/cc81c5a929d2398bad484ac18b112da9.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
-        html {
-            scroll-behavior: smooth !important;
-        }
-        
-        .boldonse-regular {
-            font-family: "Boldonse", system-ui;
-            font-weight: 400;
-            font-style: normal;
-        }
-        
-        hr {
-            height: 50px;
-            background: white;
-            border: 0;
-            margin: 0;
-        }
-        
         body {
-            background: red;
-            padding: 0;
-            margin: 0;
-            margin-left: 15px;
-            margin-right: 15px;
-            overflow-x: hidden;
-        }
-        
-        .titulo {
-            background: white;
-            margin: 0;
-        }
-
-        .intro {
+            background-color: #121212;
+            color: white;
             display: flex;
-            gap: 30px;
-            justify-content: center;
-            background: white;
-            position: sticky;
-            z-index: 1000;
-            top: 0;
-            border: 1px solid white;
-            border-radius: 0px 0px 20px 20px;
-            text-shadow: 4px 0px 0px  black;
-            height: 55px;
+            flex-direction: column;
             align-items: center;
-        }
-
-        .intro #uai {
-            height: 30px;
-            margin-top: 8px;
-        }
-
-        #tituloP {
-            color: red;
-            font-family: "Boldonse", system-ui;
-            margin: 0;
-            padding:0;
-            height: 50px;
-        }
-
-        #tituloP2 {
-            color: black;
-            font-family: Serif, Times New Roman;
-            text-align: center;
-            margin: 0;
-            background: white;
-            padding:0;
-            height: 30px;
-            border: 5px solid white;
-            border-radius: 20px 20px 0px 0px;
-        }
-
-
-        .Opcoes-iniciais {
             justify-content: center;
-            display: flex;
-            gap: clamp(10px, 4vw, 40px);
-            margin: 1px;
-        }
-
-        .BI {
-            background: #00000000;
-            border: 0;
-            transition: ease 0.1s;
-            font-family: Verdana;
-            color: black;
-            padding: 5px;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 1px;
-        }
-
-        .BI:hover {
-            transform: scale(1.1);
-        }
-
-        .página {
-            margin:0;
-            padding: 0;
-            border: opx solid #F7F6F5;
-            background: white;
-
-        }
-
-        .página div {
-            background: white;
-            padding: 4vw;
-            position: flex;
-            margin: 0px;
-            scroll-behavior: smooth;
-            border: 2px solid red;
-        }
-
-        .paginaNoticia {
-            display: flex;
+            height: 100vh;
+            font-family: sans-serif;
             margin: 0;
-            padding: 0;
         }
-
-        .paginaNoticia div {
-            display: block;
-            font-size: 10px;
-            width: 245px;
-            border: 0px solid white;
-            background: #F7F6F5;
-            margin: 10px;
-            padding: 20px;
-            flex-wrap: wrap;        
-            
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
         }
-
-        .paginaNoticia h1 {
-            text-transform: uppercase;
-            font-size: 1.5vw;
-        }
-
-        .paginaNoticia h3 {
-            font-size: 0.1vw;
-        }
-
-        #noticiaPrincipal {
-            height: 20vw;
-        }
-
-        #textoFinal {
-            font-size: 0.1vw;
-            text-align: center;
-            font-style: italic;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
+
+    <script>
+        // Aguarda 3 segundos para mostrar a animação e redireciona
+        setTimeout(function() {
+            if (window.innerWidth <= 768) {
+                window.location.href = "MobileVersion.html"; // Nome do seu arquivo mobile
+            } else {
+                window.location.href = "PcVersion.html"; // Nome do seu arquivo PC
+            }
+        }, 3000);
+    </script>
 </head>
 <body>
-    <hr id="intro">
-    
-    <div class="intro">
-        <img id="uai" src="https://i.pinimg.com/736x/35/1a/ae/351aae8e2caab3a58ba369e7c113c6cd.jpg">
-        <h1 id="tituloP">JORNAL HOJE</h1>
-        <img id="uai" src="https://i.pinimg.com/736x/35/1a/ae/351aae8e2caab3a58ba369e7c113c6cd.jpg">
-    </div>
-    
-    <h2 id="tituloP2">as noticias SUPER REAIS da sua região</h2>
-    
-    <div class="titulo">
-        
-        <div class="Opcoes-iniciais">
-            <a class="BI" href="#sessao1">Principal</a>
-            <a class="BI" href="#sessao2">política & economia</a>
-            <a class="BI" href="#sessao3">esportes & entretenimento</a>
-            <a class="BI" href="#sessao4">Contatos</a>
-        </div>
-        
-    </div>
-
-    <div class="página" id="sessao1">
-
-        
-        <div class="paginaNoticia">
-            <img id="noticiaPrincipal"src="https://i.pinimg.com/1200x/a9/83/49/a983499ac5825848c0ef412d9f74f53b.jpg">
-            <div>
-                <h1>Lula *fraudou as eleições</h1>
-                <h3>Após boquete insano dado ao alexandre de moraes, Lula consegue ilegalmente a posse da presidência mais uma vez.</h3>
-                <h3>Também, a esposa de alexandre surta, e se suicída após saltar do 550⁰ andar do burj khalifa.</h3>
-            </div>
-            <img id="noticiaPrincipal"src="https://i.pinimg.com/736x/c4/57/07/c45707a42cc5d6d2dfadd0b9e80f44f1.jpg">
-            <div>
-                <h1>Streamer famoso toma exposed</h1>
-                <h3>Youtuber, molestado e streamer, conhecido como "bisteca" foi pego no flagra gravando vídeo de leitada gostosa com 5 negões em live</h3>
-                <h3>Em seu pronunciamento, ele se defende usando argumentos sociais</h3>
-                <h2>"Quem nunca tomou leitada na cara, não tem história pra contar"</h2>
-            </div>
-        </div>
-
-        
-        <div class="paginaNoticia">
-            <img id="noticiaPrincipal"src="https://i.pinimg.com/736x/09/77/76/097776c0b48dd41d610db88354ccad9f.jpg">
-            <div>
-                <h1>Speed disse N-word denovo. . .</h1>
-                <h3>O cara das figu la do insta falou 'fuck niggers' denovo em live, e isso irrita desempregados do brazil </h3>
-                <h3>É só isso mesmo.</h3>
-            </div>
-            <img id="noticiaPrincipal"src="https://i.pinimg.com/736x/84/64/64/84646473557e27d3f73534d263563949.jpg">
-            <div>
-                <h1>Mães solteiras a 1km de você</h1>
-                <h3>to ficando sem idéia ent vou colocar essa peituda fds sdkkk</h3>
-            </div>
-        </div>
-        <h1 id="textoFinal">todo conteúdo que tá aqui não é real... até porque se fosse PUTA QUE PARIU</h1>
-        <h1 id="textoFinal">todos os direitos reservados do meu cu fodasse quem le essa porra de texto pequeno, xvideos comporations e os cacetes gigantes</h1>
-    </div>
-
-    
+    <div class="loader"></div>
+    <p>Detectando seu dispositivo...</p>
+    <p style="font-size: 12px; color: gray;">Você está sendo redirecionado para a melhor versão.</p>
 </body>
+</html>
 
 
 
